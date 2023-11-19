@@ -74,7 +74,7 @@ class HotelFragment : Fragment(R.layout.fragment_hotel) {
             binding.nameOtel5.text = hotel.rating_name
             binding.hotelDescription.text = hotel.about_the_hotel.description
 
-            adapter.submitList(images.image_urls)
+            adapter.submitList(images.image_urls.toString())
 
         }
 
