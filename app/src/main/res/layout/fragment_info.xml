@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray1"
+    tools:context=".info.InfoFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/castomToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:paddingTop="5dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="52px"
+                    android:src="@drawable/icons5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:layout_width="121dp"
+                    android:layout_height="22dp"
+                    android:text="Бронирование"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:layout_marginTop="52px"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_res1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="149dp"
+                    android:layout_height="29dp"
+                    android:background="@color/yellow"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/star_22" />
+
+                    <TextView
+                        android:layout_width="112dp"
+                        android:layout_height="19dp"
+                        android:text="5 Превосходно"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/sf_pro_display"
+                        android:textColor="@color/yellow1"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/name_otel"
+                    android:layout_width="343dp"
+                    android:layout_height="26dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Steigenberger Makadi"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="343dp"
+                    android:layout_height="17dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Madinat Makadi, Safaga Road, Makadi Bay, Египет"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_res1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/linear1"
+                    android:layout_width="66dp"
+                    android:layout_height="19dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Вылет из"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/linear2"
+                    android:layout_width="203dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="156dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Санкт-Петербург"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:layout_width="343dp"
+                    android:layout_height="19dp"
+                    app:constraint_referenced_ids="linear1,linear2"
+                    android:id="@+id/group"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/linear3"
+                    android:layout_width="101dp"
+                    android:layout_height="19dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Страна,город"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear1"/>
+
+                <TextView
+                    android:id="@+id/linear4"
+                    android:layout_width="203dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="156dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Египет, Хургада"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/linear2"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/linear5"
+                    android:layout_width="66dp"
+                    android:layout_height="19dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Даты"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear3"/>
+
+                <TextView
+                    android:id="@+id/linear6"
+                    android:layout_width="203dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="156dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="19.09.2023 – 27.09.2023"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/linear4"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/linear7"
+                    android:layout_width="100dp"
+                    android:layout_height="19dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Кол-во ночей"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear5"/>
+
+                <TextView
+                    android:id="@+id/linear8"
+                    android:layout_width="203dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="156dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="7 ночей"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/linear6"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/linear9"
+                    android:layout_width="66dp"
+                    android:layout_height="19dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Отель"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear7"/>
+
+                <TextView
+                    android:id="@+id/linear10"
+                    android:layout_width="203dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="156dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Steigenberger Makadi"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/linear8"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/linear11"
+                    android:layout_width="66dp"
+                    android:layout_height="19dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Номер"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear9"/>
+
+                <TextView
+                    android:id="@+id/linear12"
+                    android:layout_width="203dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="156dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Стандартный с видом на бассейн или сад"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/linear10"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/linear13"
+                    android:layout_width="66dp"
+                    android:layout_height="19dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Питание"
+                    android:layout_marginTop="35dp"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear11"/>
+
+                <TextView
+                    android:id="@+id/linear14"
+                    android:layout_width="203dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="156dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Все включено"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/linear12"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="232dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_res1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/info_user"
+                    android:layout_width="343dp"
+                    android:layout_height="28dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Информация о покупателе"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/edit_text_stile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:boxStrokeWidth="0dp"
+                        android:hint="Номер телефона">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/login_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:background="@drawable/edit_text_stile"
+                            android:inputType="phone"
+                            android:text="+7 (951) 555-99-00"
+                            android:maxLength="18"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="110dp"
+                    android:background="@drawable/edit_text_stile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:boxStrokeWidth="0dp"
+                        android:hint="Почта"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:textSize="16sp"
+                            android:text="examplemail.000@mail.ru"
+                            android:background="@drawable/edit_text_stile"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/info_user1"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="165dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="440dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_res1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/info_tourist"
+                    android:layout_width="152dp"
+                    android:layout_height="28dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Первый турист"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/icons2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="52dp"
+                    android:background="@drawable/edit_text_stile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="320dp"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="15dp"
+                        android:hint="Имя"
+                        app:boxStrokeWidth="0dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_stile"
+                            android:inputType="phone"
+                            android:maxLength="16"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="112dp"
+                    android:background="@drawable/edit_text_stile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="320dp"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="15dp"
+                        android:hint="Фамилия"
+                        app:boxStrokeWidth="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_stile"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="11"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="172dp"
+                    android:background="@drawable/edit_text_stile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="320dp"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="15dp"
+                        android:hint="Дата рождения"
+                        app:boxStrokeWidth="0dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_stile"
+                            android:inputType="phone"
+                            android:maxLength="16"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="232dp"
+                    android:background="@drawable/edit_text_stile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="320dp"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="15dp"
+                        android:hint="Гражданство"
+                        app:boxStrokeWidth="0dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_stile"
+                            android:inputType="phone"
+                            android:maxLength="16"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="292dp"
+                    android:background="@drawable/edit_text_stile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="320dp"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="15dp"
+                        android:hint="Номер загранпаспорта"
+                        app:boxStrokeWidth="0dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_stile"
+                            android:inputType="phone"
+                            android:maxLength="16"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="352dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text_stile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="320dp"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="15dp"
+                        android:hint="Срок действия загранпаспорта"
+                        app:boxStrokeWidth="0dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_stile"
+                            android:inputType="phone"
+                            android:maxLength="16"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tourist"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_res1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/double_tourist"
+                    android:layout_width="152dp"
+                    android:layout_height="28dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Второй турист"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/icons3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tourist1"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_res1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/double_tourist1"
+                    android:layout_width="152dp"
+                    android:layout_height="28dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Третий турист"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/icons3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tourist2"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_res1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/double_tourist2"
+                    android:layout_width="152dp"
+                    android:layout_height="28dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Четвертый турист"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/icons3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tourist3"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_res1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/double_tourist3"
+                    android:layout_width="152dp"
+                    android:layout_height="28dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Пятый турист"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/icons3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout5"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_res1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/plus_tourist"
+                    android:layout_width="152dp"
+                    android:layout_height="28dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Добавить туриста"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/icons4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout6"
+                android:layout_width="match_parent"
+                android:layout_height="156dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_res1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="66dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Тур"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="203dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="156dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="186 600 ₽"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textAlignment="textEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="120dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Топливный сбор"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text1"/>
+
+                <TextView
+                    android:id="@+id/price2"
+                    android:layout_width="132dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="156dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="9 300 ₽"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginTop="12dp"
+                    android:textAlignment="textEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/price"/>
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="128dp"
+                    android:layout_height="19dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Сервисный сбор"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text2"/>
+
+                <TextView
+                    android:id="@+id/price3"
+                    android:layout_width="203dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="156dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="2 136 ₽"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginTop="12dp"
+                    android:textAlignment="textEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/price2"/>
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="73dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="К оплате"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text3"/>
+
+                <TextView
+                    android:id="@+id/price4"
+                    android:layout_width="132dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="156dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="198 036 ₽"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginTop="12dp"
+                    android:textAlignment="textEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/price3"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="375dp"
+                android:layout_height="88dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <Button
+                    android:id="@+id/button_go_complementum"
+                    android:layout_width="343dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Оплатить 198 036 ₽"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:background="@drawable/button_res"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

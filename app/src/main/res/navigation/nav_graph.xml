@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/hotelFragment">
+
+    <fragment
+        android:id="@+id/complementumFragment"
+        android:name="com.example.testovoezadanie.ComplementumFragment"
+        android:label="fragment_complementum"
+        tools:layout="@layout/fragment_complementum" >
+        <action
+            android:id="@+id/action_complementumFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_complementumFragment_to_hotelFragment"
+            app:destination="@id/hotelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.testovoezadanie.info.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_infoListFragment"
+            app:destination="@id/infoListFragment" />
+        <action
+            android:id="@+id/action_infoFragment_to_complementumFragment"
+            app:destination="@id/complementumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoListFragment"
+        android:name="com.example.testovoezadanie.room.InfoListFragment"
+        android:label="fragment_info_list"
+        tools:layout="@layout/fragment_info_list" >
+        <action
+            android:id="@+id/action_infoListFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_infoListFragment_to_hotelFragment"
+            app:destination="@id/hotelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hotelFragment"
+        android:name="com.example.testovoezadanie.hotel.HotelFragment"
+        android:label="fragment_hotel"
+        tools:layout="@layout/fragment_hotel" >
+        <action
+            android:id="@+id/action_hotelFragment_to_infoListFragment"
+            app:destination="@id/infoListFragment" />
+    </fragment>
+</navigation>

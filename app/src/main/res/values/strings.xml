@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TestovoeZadanie</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="font" />
+
+    <string name="font_text">SF_Pro_Display_Regular.otf</string>
+</resources>

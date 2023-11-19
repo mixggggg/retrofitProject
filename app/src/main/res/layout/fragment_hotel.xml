@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".hotel.HotelFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="530dp"
+                android:background="@drawable/layout_res"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/castomToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" >
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="22dp"
+                        android:text="Отель"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/sf_pro_display"
+                        android:layout_marginTop="52px"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcVievHotel"
+                    android:layout_width="match_parent"
+                    android:layout_height="257dp"
+                    app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="101dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="149dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="374dp"
+                    android:background="@color/yellow"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/star_22" />
+
+                    <TextView
+                        android:id="@+id/name_otel4"
+                        android:layout_width="10dp"
+                        android:layout_height="19dp"
+                        android:fontFamily="@font/sf_pro_display"
+                        android:textAlignment="center"
+                        android:textColor="@color/yellow1"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/name_otel5"
+                        android:layout_width="110dp"
+                        android:layout_height="19dp"
+                        android:fontFamily="@font/sf_pro_display"
+                        android:textAlignment="center"
+                        android:textColor="@color/yellow1"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/name_otel"
+                    android:layout_width="343dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="411dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/name_otel1"
+                    android:layout_width="343dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="465dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/normtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="488dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="от"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/name_otel2"
+                    android:layout_width="110dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="488dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toEndOf="@+id/normtext"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/normtext1"
+                    android:layout_width="24dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="488dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="₽"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toEndOf="@+id/name_otel2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/name_otel3"
+                    android:layout_width="145dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="198dp"
+                    android:layout_marginTop="502dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="428dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_res1">
+
+                <TextView
+                    android:layout_width="343dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Об отеле"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="295dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="58dp"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" >
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin = "5dp">
+
+                        <LinearLayout
+                            android:layout_width="92dp"
+                            android:layout_height="29dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/layout_res2"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="5dp">
+
+                            <TextView
+                                android:id="@+id/tabl1"
+                                android:layout_width="72dp"
+                                android:layout_height="19dp"
+                                android:fontFamily="@font/sf_pro_display"
+                                android:text="3-я линия"
+                                android:textAlignment="center"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="178dp"
+                            android:layout_height="29dp"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/layout_res2"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="5dp">
+
+                            <TextView
+                                android:id="@+id/tabl2"
+                                android:layout_width="158dp"
+                                android:layout_height="19dp"
+                                android:fontFamily="@font/sf_pro_display"
+                                android:text="Платный Wi-Fi в фойе"
+                                android:textAlignment="center"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin = "5dp">
+
+                        <LinearLayout
+                            android:layout_width="165dp"
+                            android:layout_height="29dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/layout_res2"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="5dp">
+
+                            <TextView
+                                android:id="@+id/tabl3"
+                                android:layout_width="145dp"
+                                android:layout_height="19dp"
+                                android:fontFamily="@font/sf_pro_display"
+                                android:text="30 км до аэропорта"
+                                android:textAlignment="center"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="122dp"
+                            android:layout_height="29dp"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/layout_res2"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="5dp">
+
+                            <TextView
+                                android:id="@+id/tabl4"
+                                android:layout_width="102dp"
+                                android:layout_height="19dp"
+                                android:fontFamily="@font/sf_pro_display"
+                                android:text="1 км до пляжа"
+                                android:textAlignment="center"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </TableRow>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/hotel_description"
+                    android:layout_width="343dp"
+                    android:layout_height="76dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="136dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="184dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/layout_res3"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="228dp"
+                    android:padding="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp">
+
+                        <ImageView
+                            android:id="@+id/emoji"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/emoji_happy"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_view"
+                            android:layout_width="69dp"
+                            android:layout_height="19dp"
+                            android:layout_marginStart="10dp"
+                            android:text="Удобства"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/sf_pro_display"
+                            app:layout_constraintStart_toEndOf="@+id/emoji"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_view1"
+                            android:layout_width="135dp"
+                            android:layout_height="17dp"
+                            android:layout_marginStart="10dp"
+                            android:text="Самое необходимое"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/sf_pro_display"
+                            app:layout_constraintStart_toEndOf="@+id/emoji"
+                            app:layout_constraintTop_toBottomOf="@+id/text_view"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/icons"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="275dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/gray3"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp">
+
+                        <ImageView
+                            android:id="@+id/emoji1"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/tick_square"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_view2"
+                            android:layout_width="103dp"
+                            android:layout_height="19dp"
+                            android:layout_marginStart="10dp"
+                            android:text="Что включено"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/sf_pro_display"
+                            app:layout_constraintStart_toEndOf="@+id/emoji1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_view3"
+                            android:layout_width="135dp"
+                            android:layout_height="17dp"
+                            android:layout_marginStart="10dp"
+                            android:text="Самое необходимое"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/sf_pro_display"
+                            app:layout_constraintStart_toEndOf="@+id/emoji1"
+                            app:layout_constraintTop_toBottomOf="@+id/text_view2"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/icons"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="275dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray3"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp">
+
+                        <ImageView
+                            android:id="@+id/emoji2"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/close_square"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_view4"
+                            android:layout_width="125dp"
+                            android:layout_height="19dp"
+                            android:layout_marginStart="10dp"
+                            android:text="Что не включено"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/sf_pro_display"
+                            app:layout_constraintStart_toEndOf="@+id/emoji2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_view5"
+                            android:layout_width="135dp"
+                            android:layout_height="17dp"
+                            android:layout_marginStart="10dp"
+                            android:text="Самое необходимое"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/sf_pro_display"
+                            app:layout_constraintStart_toEndOf="@+id/emoji2"
+                            app:layout_constraintTop_toBottomOf="@+id/text_view4"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/icons"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="375dp"
+                android:layout_height="88dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <Button
+                    android:id="@+id/button_hotel"
+                    android:layout_width="343dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/button_res"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="К выбору номера"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
