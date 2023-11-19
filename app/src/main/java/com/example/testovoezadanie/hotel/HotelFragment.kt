@@ -63,7 +63,6 @@ class HotelFragment : Fragment(R.layout.fragment_hotel) {
 
             val hotel = hotelApi.hotelInfo()
 
-
             binding.nameOtel.text = hotel.name
             binding.nameOtel1.text = hotel.adress
             binding.nameOtel2.text = hotel.minimal_price.toString()
