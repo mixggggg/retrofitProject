@@ -10,27 +10,23 @@ import com.example.testovoezadanie.R
 import com.example.testovoezadanie.databinding.ItemHotelImageBinding
 import com.example.testovoezadanie.utilits.downloadAndSetImage
 
-class AdapterImageHotel(): ListAdapter<Images, AdapterImageHotel.Holder>(Comparator()) {
+class AdapterImageHotel(): ListAdapter<HotelModel, AdapterImageHotel.Holder>(Comparator()) {
 
     class Holder(view: View) : RecyclerView.ViewHolder(view){
         private val binding = ItemHotelImageBinding.bind(view)
 
-        fun bind(imagehotel: Images)= with(binding){
+        fun bind(imagehotel: HotelModel)= with(binding){
 
-            imagehotel.image_urls.toArray()
-
-           // imageHotelMain.downloadAndSetImage(imagehotel.image_urls.toArray().toString())
+            imageHotelMain.downloadAndSetImage(imagehotel.image_urls.toString())
         }
     }
 
-   // private var additionalList = listOf<HotelModel>()
-
-    class Comparator: DiffUtil.ItemCallback<Images>(){
-        override fun areItemsTheSame(oldItem: Images, newItem: Images): Boolean {
+    class Comparator: DiffUtil.ItemCallback<HotelModel>(){
+        override fun areItemsTheSame(oldItem: HotelModel, newItem: HotelModel): Boolean {
             return oldItem.image_urls == newItem.image_urls
         }
 
-        override fun areContentsTheSame(oldItem: Images, newItem: Images): Boolean {
+        override fun areContentsTheSame(oldItem: HotelModel, newItem: HotelModel): Boolean {
             return oldItem == newItem
         }
     }

@@ -18,6 +18,6 @@ data class HotelAboutModel(
 )
 
 data class Images(
-    var image_urls: ArrayList<String>
+    var image_urls: List<String>
 )
 

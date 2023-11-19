@@ -63,8 +63,6 @@ class HotelFragment : Fragment(R.layout.fragment_hotel) {
 
             val hotel = hotelApi.hotelInfo()
 
-            val images = hotelApi.hotelList()
-
 
             binding.nameOtel.text = hotel.name
             binding.nameOtel1.text = hotel.adress
@@ -74,7 +72,7 @@ class HotelFragment : Fragment(R.layout.fragment_hotel) {
             binding.nameOtel5.text = hotel.rating_name
             binding.hotelDescription.text = hotel.about_the_hotel.description
 
-            adapter.submitList(images.image_urls.toString())
+            adapter.submitList(hotel.image_urls)
 
         }
 
